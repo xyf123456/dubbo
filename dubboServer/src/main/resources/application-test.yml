@@ -1,0 +1,35 @@
+server:
+  port: 8093
+  servlet:
+    context-path: /dubboOne
+
+#\u6570\u636E\u6E90\u914D\u7F6E
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mooc_one?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+
+
+
+#mybatis
+mybatis:
+  mapper-locations: classpath*:mappers/*.xml
+  check-config-location: true
+  config-location: classpath:mybatis-config.xml
+
+#dubbo\u7684\u914D\u7F6E
+dubbo:
+  application:
+    name: dubboOne-provider
+    registry: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20903
+  scan:
+    base-packages: com.ht.api.service
+#\u65E5\u5FD7\u914D\u7F6E
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/javaWorkSpace/dubbo
