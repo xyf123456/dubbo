@@ -13,7 +13,7 @@
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <dubbo.version>2.6.4</dubbo.version>
         <zookeeper.version>3.4.10</zookeeper.version>
-        <mysql.version>5.1.47</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
     </properties>
     <artifactId>dubboServer</artifactId>
     <!-- 依赖管理 -->
